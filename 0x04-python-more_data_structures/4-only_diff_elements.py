@@ -4,7 +4,9 @@
 def only_diff_elements(set_1, set_2):
     new_list = []
     for i in set_1:
-        for j in set_2:
-            if i not in set_2:
-                new_list.append(i)
+        if (i not in set_2):
+            new_list.append(i)
+    for i in set_2:
+        if (i not in set_1) and (i not in new_list):
+            new_list.append(i)
     return new_list
