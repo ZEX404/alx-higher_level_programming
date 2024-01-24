@@ -3,12 +3,11 @@
 
 def uniq_add(my_list=[]):
     new_list = []
-    for i in my_list:
-        if not (i in new_list):
-            new_list.append(i)
     sum = 0
-    for i in new_list:
-        sum += i
+    for i in my_list:
+        if i not in new_list:
+            sum += i
+            new_list.append(i)
 
     return sum
 
